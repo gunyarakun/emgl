@@ -105,7 +105,8 @@ GLuint buildProgram()
 
         void main() {
             vec3 n = normalize(e_normal);
-            float l = abs(dot(n, normalize(vec3(-1, 1, 1))));
+            if (!gl_FrontFacing) n = -n;
+            float l = max(0.0, dot(n, normalize(vec3(-1, 1, 1))));
             gl_FragColor = vec4(l, l, l, 1.0);
         }
         )";
