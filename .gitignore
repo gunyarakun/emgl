@@ -1,6 +1,7 @@
 CMakeCache.txt
 Makefile
 CMakeFiles
+CMakeScripts
 cmake_install.cmake
 build/
 emgl.*
